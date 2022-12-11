@@ -3,7 +3,7 @@ import { Document } from 'mongoose'
 
 export type TaskDocument = Task & Document
 
-@Schema({timestamps: true})
+@Schema({timestamps: true} )
 export class Task{
 
     @Prop()
