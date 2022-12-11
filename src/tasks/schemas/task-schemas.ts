@@ -3,7 +3,7 @@ import { Document } from 'mongoose'
 
 export type TaskDocument = Task & Document
 
-@Schema()
+@Schema({timestamps: true})
 export class Task{
 
     @Prop()
@@ -12,7 +12,7 @@ export class Task{
     @Prop()
     body: string
 
-    @Prop()
+    @Prop({default: false})
     isCompleted: boolean
 
     @Prop()
@@ -20,7 +20,6 @@ export class Task{
 
     @Prop()
     updatedAt: string
-
 }
 
 export const TaskSchema = SchemaFactory.createForClass(Task)
