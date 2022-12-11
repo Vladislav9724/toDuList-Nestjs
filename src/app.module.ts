@@ -8,7 +8,7 @@ import {TasksModule} from "./tasks/tasks.module";
 @Module({
   imports: [
       TasksModule,
-      MongooseModule.forRoot(`mongodb+srv://user:user@cluster0.8fggakd.mongodb.net/?retryWrites=true&w=majority`)
+      MongooseModule.forRoot('mongodb://localhost:27017')
   ],
   controllers: [AppController],
   providers: [AppService],
